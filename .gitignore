@@ -23,3 +23,12 @@ go.work.sum
 
 # env file
 .env
+
+static/.idea/vcs.xml
+static/.idea/workspace.xml
+.idea
+vendor
+.DS_Store
+.vscode
+**/.DS_Store
+tmp
