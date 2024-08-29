@@ -9,12 +9,13 @@ func TestBasicTextEncryptor(t *testing.T) {
 	ciphertext1 := "ENC(zH0ANx/qIJ4HDNd2SrDOig==)"
 	ciphertext2 := "123456"
 
-	plainText1 := GetString(password, ciphertext1)
+	enc := CreateBasicTextEncryptor(password)
+	plainText1 := enc.GetString(ciphertext1)
 	if plainText1 != "123456" {
 		t.Fail()
 	}
 
-	plainText2 := GetString(password, ciphertext2)
+	plainText2 := enc.GetString(ciphertext2)
 	if plainText2 != "123456" {
 		t.Fail()
 	}
